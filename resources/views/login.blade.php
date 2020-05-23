@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type＝”text/css” href="style.css">
+        <link rel="stylesheet" type＝”text/css” href={{ asset("assets/css/style.css") }}>
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
         <title>Gamaguchi</title>
         <script>
@@ -14,7 +14,7 @@
                 さあ、はじめよう！
             </div>
             <div class="login_img">
-                <img src="img/gama.png">
+                <img src={{ asset("assets/img/gama.png") }}>
             </div>
         </div>
     </body>
