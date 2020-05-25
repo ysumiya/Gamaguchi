@@ -2,7 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" type＝”text/css” href={{ asset("assets/css/style.css") }}>
-        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">        
         <title>Gamaguchi</title>
         <script>
 
