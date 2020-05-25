@@ -20,12 +20,12 @@ body{
 .button{
     border:1px solid #333;
     border-radius:20px;
-    width:298px; height:32px;
+    width:300px; height:40px;
     margin:10px auto;
     background:#fff;
     text-align:center;
     font-size:16px; color:#333;
-    padding:6px 0 0 0;
+    box-sizing:border-box;
 }
 .bt2to1{
     display:inline-block;
