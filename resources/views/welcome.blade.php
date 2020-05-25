@@ -8,8 +8,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link rel="stylesheet" type＝”text/css” href="{{ asset(assets/css/style.css")}}>
-        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> 
+        <link rel="stylesheet" type＝”text/css” href={{ asset("assets/css/style.css")}}>
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
         <!-- Styles -->
         <!-- <style>
             html, body {
@@ -71,7 +71,7 @@
         </svg>
         <div class="welcome_gama">
             <div class="sub_title">みんなでつかえる、<br>おてがる財布。</div>
-            <img src="{{ asset(assets/img/gama.png")}}>　
+            <img src={{ asset("assets/img/gama.png")}}>　
         </div>
         <div class="gama_color button">メールアドレスで登録</div>
         <div class="button">ログイン</div>

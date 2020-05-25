@@ -23,3 +23,6 @@ Route::get('/login', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/card_register', 'CcardController@show_regist_page');
+Route::post('/card', 'CcardController@insert');
