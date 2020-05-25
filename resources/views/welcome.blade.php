@@ -71,7 +71,7 @@
         </svg>
         <div class="welcome_gama">
             <div class="sub_title">みんなでつかえる、<br>おてがる財布。</div>
-            <img src={{ asset("assets/img/gama.png")}}>　
+            <img src={{ asset("assets/img/gama.png" )}}>　
         </div>
         <div class="gama_color button">メールアドレスで登録</div>
         <div class="button">ログイン</div>
