@@ -27,6 +27,9 @@ body{
     font-size:16px; color:#777;
     box-sizing:border-box;
 }
+.button:hover{
+    background:#eee;
+}
 .bt2to1{
     display:inline-block;
     width:138px; margin:5px;
@@ -40,7 +43,11 @@ body{
     border:1px solid #00D03A;
     color:#fff;
 }
+.gama_color:hover{
+    background:#14ff56;
+    border:1px solid #14ff56;
 
+}
 .gamacap{
     fill:#fff;
     position:absolute; top:-30px;
@@ -172,6 +179,21 @@ body{
 .line{
     background:#5ae628;
     border:1px solid #5ae628;
+    color:#fff;
+}
+.fb:hover{
+    background:rgb(99, 125, 180);
+    border:1px solid rgb(99, 125, 180);
+    color:#fff;
+}
+.google:hover{
+    background:#e77366;
+    border:1px solid #e77366;
+    color:#fff;
+}
+.line:hover{
+    background:#78f74a;
+    border:1px solid #78f74a;
     color:#fff;
 }
 
