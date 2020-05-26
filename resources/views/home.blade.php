@@ -5,6 +5,7 @@
         <div class="mainbox">
             <div class="user_box">
                 <form action="/logout" method="POST">
+                    @csrf
                     <button type="submit" class="no_display"><div class="icon home"><img src={{ asset("assets/img/wanima.jpg" ) }}></div></button>
                 </form>
                 <div class="zandaka"><span>¥5,000</span></div>
