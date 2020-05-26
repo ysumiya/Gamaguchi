@@ -207,7 +207,7 @@ body{
 /** home **/
 .user_box{
     width:330px; height:50px; border-radius:25px;
-    background:#ccc; padding:5px;
+    background:#ececec; padding:5px;
     box-sizing:border-box;
     margin:0 0 10px 0; 
     text-align:left;
@@ -240,7 +240,12 @@ body{
     width:100%;
     height:calc(100vh - 160px);
     overflow-x: hidden; overflow-y: scroll;
+    scrollbar-width: none;
 }
+.gama_list::-webkit-scrollbar {
+    display:none;
+}
+
 .home_plus{
     position: absolute; bottom:20px; left:calc(50% - 150px);
 }
@@ -256,4 +261,21 @@ body{
     display:block; position:absolute; top:50%; left:50%;
     transform: translate(-50%,-50%);
     color:#eee;
+    margin:
+}
+.copybutton{
+    width:30px; height:30px;
+    color:#aaa; display:inline-block;
+    margin:0 0 0 10px;
+}
+.form_template.copygama{
+    width:260px;
+    display:inline-block;
+}
+.copygama input{
+    width:248px;
+}
+.gama.copygama{
+    margin:20px auto 0 auto;
+}
 }
