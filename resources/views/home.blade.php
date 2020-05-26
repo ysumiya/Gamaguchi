@@ -44,7 +44,10 @@
                     <div class="gama_zandaka">¥35,640</div>
                 </div></button>
             </div>
-            <button class="button gama_color home_plus"><i class="fas fa-lg fa-plus"></i></button>
+            <form action="/gama_create" method="GET">
+            @csrf
+                <button class="button gama_color home_plus" type="submit"><i class="fas fa-lg fa-plus"></i></button>
+            </form>
         </div>
         </body>
 @endsection
