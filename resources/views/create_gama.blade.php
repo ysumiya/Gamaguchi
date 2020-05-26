@@ -22,7 +22,7 @@
                 </div>
             <input type="submit" class="gama_color button" value="作成"> 
         </form>
-        <form action="/home" method="post">
+        <form action="/home" method="get">
         @csrf
             <input type="submit" class="button" value="キャンセル">
         </form>
