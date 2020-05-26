@@ -22,9 +22,9 @@
                     <form action="/home" method="post">
                         <input type="submit" class=" bt2to1 button" value="キャンセル">
                     </form>
-                    @crsf
+                    @csrf
                 </form>
-                @crsf
+                @csrf
             </div>
     </div>
     </body>
