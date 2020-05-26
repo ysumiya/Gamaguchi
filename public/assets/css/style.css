@@ -18,13 +18,13 @@ body{
     margin:10px 0;
 }
 .button{
-    border:1px solid #333;
+    border:1px solid #777;
     border-radius:20px;
     width:300px; height:40px;
     margin:5px auto;
     background:#fff;
     text-align:center;
-    font-size:16px; color:#333;
+    font-size:16px; color:#777;
     box-sizing:border-box;
 }
 .bt2to1{
@@ -243,4 +243,17 @@ body{
 }
 .home_plus{
     position: absolute; bottom:20px; left:calc(50% - 150px);
+}
+
+/** create_gama **/
+.gama_wrapper.create_gama{
+    margin:-20px 0 0 0;
+}
+.gama.create_gama{
+    background:#ccc
+}
+.gama.create_gama i{
+    display:block; position:absolute; top:50%; left:50%;
+    transform: translate(-50%,-50%);
+    color:#eee;
 }
