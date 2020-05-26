@@ -15,10 +15,10 @@ class CcardController extends Controller
 
         try{
             $ccard = App\Ccard::create(['number'=>$data['c_number'], 'limit_month_str'=>$data['c_limit_month'], 'limit_month_int'=>$limit_month_int, 'limit_year_str'=>$data['c_limit_year'], 'limit_year_int'=>$limit_year_int, 'user_id'=>Auth::id()]);
-            return view('home');
+            return redirect('home');
         } catch (\Illuminate\Database\QueryException $exception) {
             $errorInfo = $exception->errorInfo;
-            return view('card_registration', $errorInfo);
+            return view('card_register', $data);
         }
         
     }
