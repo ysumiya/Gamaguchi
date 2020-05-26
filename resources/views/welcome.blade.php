@@ -10,13 +10,16 @@
             <div class="sub_title">みんなでつかえる、<br>おてがる財布。</div>
             <img src={{ asset("assets/img/gama.png" )}}>　
         </div>
-        <div class="gama_color button">メールアドレスで登録</div>
-        <div class="button">ログイン</div>
+        <form action="/register" method="get"><input type="submit" class="gama_color button" value="メールアドレスで登録"></form>
+        <form action="/login" method="get"><input type="submit" class="button" value="ログイン"></form>
         <div class="welcome_sociallogin">
             <div class="sub_title">ソーシャルアカウントでログイン</div>
-            <div class="bt3to1 button fb"><i class="fab fa-lg fa-facebook"></i></div>
-            <div class="bt3to1 button google"><i class="fab fa-lg fa-google"></i></div>
-            <div class="bt3to1 button line"><i class="fab fa-lg fa-line"></i></div>
+            <form action="  " method="post"><button type="submit" class="bt3to1 button fb">
+                <i class="fab fa-lg fa-facebook"></i></button></form>
+            <form action="  " method="post"><button type="submit" class="bt3to1 button google">
+                <i class="fab fa-lg fa-google"></i></button></form>
+            <form action="  " method="post"><button type="submit" class="bt3to1 button line">
+                <i class="fab fa-lg fa-line"></i></button></form>
         </div>
     </div>
     </body>

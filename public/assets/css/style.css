@@ -21,7 +21,7 @@ body{
     border:1px solid #333;
     border-radius:20px;
     width:300px; height:40px;
-    margin:10px auto;
+    margin:5px auto;
     background:#fff;
     text-align:center;
     font-size:16px; color:#333;
@@ -29,11 +29,11 @@ body{
 }
 .bt2to1{
     display:inline-block;
-    width:138px; margin:10px 5px;
+    width:138px; margin:5px;
 }
 .bt3to1{
     display:inline-block;
-    width:88px; margin:10px 5px;
+    width:88px; margin:5px;
 }
 .gama_color{
     background:#00D03A;
@@ -99,6 +99,9 @@ body{
     margin:20px 0 0 0;
     color:#aaa;
     font-size:14px;
+}
+.welcome_sociallogin form{
+    display:inline-block;
 }
 .fb{
     background:#3B5998;
