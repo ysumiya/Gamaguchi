@@ -30,3 +30,9 @@ Route::get('/card_register', 'CcardController@show_regist_page');
 // });
 
 Route::post('/card', 'CcardController@insert');
+
+Route::get('/gama_create',  function() {
+        return view('create_gama');
+    });
+
+Route::post('/gama', 'GamaController@insert');

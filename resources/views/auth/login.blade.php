@@ -15,7 +15,7 @@
                     <input id="email" type="text" name="email"　placeholder="メールアドレス">
                 </div>
                 <div class="form_template">パスワード
-                    <input id="password" type="text" name="password"　placeholder="パスワード">
+                    <input id="password" type="password" name="password"　placeholder="パスワード">
                 </div>
                 <input type="submit" class="gama_color bt2to1 button" value="ログイン">
             </div>
