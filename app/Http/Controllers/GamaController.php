@@ -27,4 +27,11 @@ class GamaController extends Controller
         }
         
     }
+
+    protected function calcSum($gama_id)
+    {
+        $gama = Gama::find($gama_id);
+        $sum = $gama->sum;
+        return $sum;
+    }
 }
