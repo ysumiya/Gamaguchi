@@ -3,23 +3,35 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Ccard;
+use Illuminate\Support\Facades\Auth;
 
 class CcardController extends Controller
 {
     //
-    protected function insert(array $data)
+    protected function insert(Request $data)
     {
-        // $data = c_number, c_limit_month, c_limit_year
-        $limit_month_int = (int)$data['c_limit_month'];
-        $limit_year_int = (int)$data['c_limit_year'];
+        // $data = number, month, year
+        $number = $data->input('number');
+        $limit_month_str = $data->input('month');
+        $limit_year_str = $data->input('year');
+        $limit_month_int = (int)$limit_month_str;
+        $limit_year_int = (int)$limit_year_str;
+        $user_id = Auth::id();
 
         try{
-            $ccard = App\Ccard::create(['number'=>$data['c_number'], 'limit_month_str'=>$data['c_limit_month'], 'limit_month_int'=>$limit_month_int, 'limit_year_str'=>$data['c_limit_year'], 'limit_year_int'=>$limit_year_int, 'user_id'=>Auth::id()]);
-            return view('home');
+            $ccard = Ccard::create(['number'=>$number, 'limit_month_str'=>$limit_month_str, 'limit_month_int'=>$limit_month_int, 'limit_year_str'=>$limit_year_str, 'limit_year_int'=>$limit_year_int, 'user_id'=>$user_id]);
+            return redirect('home');
         } catch (\Illuminate\Database\QueryException $exception) {
             $errorInfo = $exception->errorInfo;
-            return view('card_registration', $errorInfo);
+            return view('card_register', $data);
         }
         
     }
+
+    protected function show_regist_page()
+    {
+        return view('card_register');
+    }
+
 }

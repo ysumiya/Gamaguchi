@@ -25,4 +25,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/card_register', 'CcardController@show_regist_page');
+// Route::get('/card_register', function() {
+//     return view('card_register');
+// });
+
 Route::post('/card', 'CcardController@insert');
