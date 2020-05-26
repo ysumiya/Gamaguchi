@@ -8,6 +8,7 @@
         </svg>
         <div class="sub_title">ログイン</div>
         <form action="  " method="post">
+        @csrf
             <div class="register_form_login">
                 <div class="form_template">メールアドレス
                     <input id="email" type="text" name="email"　placeholder="メールアドレス">
