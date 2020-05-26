@@ -8,6 +8,7 @@
         </svg>
         <div class="sub_title">新しいGama</div>
         <form action="/gama" method="post">
+            @csrf
             <div class="register_form">
                 <button class="gama_wrapper create_gama"><div class="gama create_gama">        
                     <svg class="gamacap" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280.29 83.84">
@@ -18,13 +19,12 @@
                 <div class="form_template">Gamaの名前
                     <input id="gama_name" type="text" name="gama_name"　placeholder="New Gama">
                 </div>
-                    <input type="submit" class="gama_color bt2to1 button" value="作成">
-                    <form action="/home" method="post">
-                        <input type="submit" class=" bt2to1 button" value="キャンセル">
-                    </form>
+                <form action="/home" method="post">
                     @csrf
+                    <input type="submit" class=" bt2to1 button" value="キャンセル">
                 </form>
-                @csrf
+                <input type="submit" class="gama_color bt2to1 button" value="作成">
+                </form>
             </div>
     </div>
     </body>
