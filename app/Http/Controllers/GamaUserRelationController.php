@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\GamaUserRelation;
 
 class GamaUserRelationController extends Controller
 {
@@ -21,4 +22,13 @@ class GamaUserRelationController extends Controller
         }
         
     }
+    public function search_by_user_id($user_id){
+        $items =GamaUserRelation::where('user_id',$user_id)->get();
+        $stack =array();
+        foreach ($items as $i) {
+            array_push($stack,array($i->gama_id,$i->owner_flag));
+        }
+        return $stack;
+    }
+    
 }
