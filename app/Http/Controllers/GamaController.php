@@ -28,21 +28,21 @@ class GamaController extends Controller
         
     }
 
-    protected function calc_sum($gama_id)
+    public function calc_sum($gama_id)
     {
         $gama = Gama::find($gama_id);
         $sum = $gama->sum;
         return $sum;
     }
 
-    protected function set_active_flag($gama_id)
+    public function set_active_flag($gama_id)
     {
         $gama = Gama::find($gama_id);
         $gama->active_flag = 1;
         $gama->save();
     }
 
-    protected function set_inactive_flag($gama_id)
+    public function set_inactive_flag($gama_id)
     {
         $gama = Gama::find($gama_id);
         $gama->active_flag = 0;
