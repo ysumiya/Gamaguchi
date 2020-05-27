@@ -26,7 +26,7 @@ class GamaUserRelationController extends Controller
         $items =GamaUserRelation::where('user_id',$user_id)->get();
         $stack =array();
         foreach ($items as $i) {
-            array_push($stack,array($i->gama_id,$i->owner_flag));
+            array_push($stack,array("gama_id"=>$i->gama_id, "gama_name"=>$i->gama_name, "owner_flag"=>$i->owner_flag));
         }
         return $stack;
     }
