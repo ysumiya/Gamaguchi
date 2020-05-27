@@ -38,4 +38,13 @@ Route::get('/create_gama_complete',  function() {
     return view('create_gama_complete');
 });
 
+// Route::middleware(['auth:api'])->group(function () {
+//     Route::get('/wallet/{id}', 'DetailController@index');
+// });
 Route::get('/wallet/{id}', 'DetailController@index');
+
+// Route::get('/charge/{id}', 'ChargeController@index');
+Route::get('/charge', 'ChargeController@index');
+
+// Route::post('/charge/{id}', 'ChargeController@insert');
+Route::post('/charge', 'ChargeController@insert');

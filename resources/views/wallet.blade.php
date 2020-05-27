@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+    <?php
+        session(["gama_id"=>$gama_id, "gama_name"=>$gama_name]);
+    ?>
+
     <body class="gama_back">
         <div class="mainbox">
             <form action="/home" method="get" class="backbutton">
@@ -114,7 +118,7 @@
                         @csrf
                         <input class="button bt3to1" type="submit" value="決済履歴">
                     </form><br>
-                    <form action="  " method="  ">
+                    <form action="/charge" method="GET">
                         @csrf
                         <input class="button bt2to1 gama_color" type="submit" value="Gamaに入金">
                     </form><form action="  " method="  ">

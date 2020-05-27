@@ -17,7 +17,7 @@
             <?php
             foreach ($datas as $data) {
 
-                echo '<form action="/wallet/'.$data["gama_id"].'" method="GET"> @csrf';
+                echo '<form action="/wallet/'.$data["gama_id"].'" method="GET">';
             
                 echo '<button class="gama_wrapper"><div class="gama">';
 
