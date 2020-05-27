@@ -11,12 +11,12 @@
         @csrf
             <div class="register_form_card">
                 <div class="form_template">カード番号
-                    <input id="user_name" type="text" name="number"　placeholder="カード番号">
+                    <input id="user_name" type="text" name="number" placeholder="カード番号">
                 </div>
                 <div class="form_template log_kigen">有効期限<br>
-                    <input id="month" type="text" name="month"　placeholder="月">　/　<input id="year" type="text" name="year"　placeholder="年">
+                    <input id="month" type="text" name="month" placeholder="月">　/　<input id="year" type="text" name="year" placeholder="年">
                 </div><div class="form_template log_code">セキュリティコード<br>
-                    <input id="cvc" type="text" name="cvc"　placeholder="3桁の数字">
+                    <input id="cvc" type="text" name="cvc" placeholder="3桁の数字">
                 </div>
                 <input type="submit" class="gama_color bt2to1 button" value="登録">
             </div>

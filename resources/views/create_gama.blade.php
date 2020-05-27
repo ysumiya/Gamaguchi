@@ -18,7 +18,7 @@
             </div>
                 </button>
                 <div class="form_template">Gamaの名前
-                    <input id="gama_name" type="text" name="gama_name"　placeholder="New Gama">
+                    <input id="gama_name" type="text" name="gama_name" placeholder="New Gama">
                 </div>
             <input type="submit" class="gama_color bt2to1 button" value="作成"> 
         </form>

@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link rel="stylesheet" type＝”text/css” href="assets/css/style.css">
-        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> 
-    </head>
+@section('content')
     <body class="gama_back">
         <div class="welcome_mainbox">
             <svg class="gamacap" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280.29 83.84">
@@ -18,12 +10,13 @@
             <div class="gama_pay">
                 <div>お手持ちの決済アプリで<br>読み込んでください。</div>
                 <div class="gama_pay_QR">
-                    <img src="assets/img/QR.png">
+                    <img src={{ asset( "assets/img/QR.png" ) }}>
                 </div>
                 <form action="/wallet" method="get">
+                @csrf
                     <input type="submit" class="bt2to1 button" value="戻る">
                 </form>
             </div>
         </div>
-        </body>
-</html>
+    </body>
+@endsection

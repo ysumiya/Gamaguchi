@@ -12,16 +12,16 @@
             <div class="register_form">
                 <div class="form_template">ユーザー名
                 <!-- <input id="user_name" type="text" name="user_name"　placeholder="ユーザー名"> -->
-                <input id="name" type="text" name="name"　placeholder="ユーザー名">
+                <input id="name" type="text" name="name" placeholder="ユーザー名">
                 </div>
                 <div class="form_template">メールアドレス
-                    <input id="email" type="text" name="email"　placeholder="メールアドレス">
+                    <input id="email" type="text" name="email" placeholder="メールアドレス">
                 </div>
                 <div class="form_template">パスワード
-                    <input id="password" type="password" name="password"　placeholder="パスワード">
+                    <input id="password" type="password" name="password" placeholder="パスワード">
                 </div>
                 <div class="form_template">パスワード(再入力)
-                <input id="password_confirm" type="password" name="password_confirmation"　placeholder="パスワード(再入力)">
+                <input id="password_confirm" type="password" name="password_confirmation" placeholder="パスワード(再入力)">
                 <!-- <input id="password_re" type="text" name="password_re"　placeholder="パスワード(再入力)"> -->
                 </div>
                 <input type="submit" class="gama_color bt2to1 button" value="次へ">
