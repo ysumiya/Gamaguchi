@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Laravel</title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" type＝”text/css” href="assets/css/style.css">
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> 
+    </head>
+    <body class="gama_back">
+    <div class="welcome_mainbox">
+        <svg class="gamacap" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280.29 83.84">
+            <path d="M216.51,68.84,184.22,36.56A25,25,0,0,0,140.15,13a25,25,0,0,0-44.08,23.6L63.79,68.84H15a15,15,0,0,0-15,15H70l36.67-36.67A25,25,0,0,0,140.15,37a25,25,0,0,0,33.47,10.13l36.67,36.67h70a15,15,0,0,0-15-15Z"/>
+        </svg>
+        <div class="sub_title">Gamaに招待</div>
+            <div class="register_form">
+                <div class="gama copygama">        
+                    <svg class="gamacap" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280.29 83.84">
+                        <path d="M216.51,68.84,184.22,36.56A25,25,0,0,0,140.15,13a25,25,0,0,0-44.08,23.6L63.79,68.84H15a15,15,0,0,0-15,15H70l36.67-36.67A25,25,0,0,0,140.15,37a25,25,0,0,0,33.47,10.13l36.67,36.67h70a15,15,0,0,0-15-15Z"/>
+                    </svg>
+                    <div class="gama_img"><img src="assets/img/wanima.jpg"></div>
+                </div>
+                <div class="form_template copygama">共有リンク
+                    <input id="gama_link" type="text" value="https://www.gmo.jp/" readonly>
+                </div><button onclick="copyToClipboard()" class="copybutton no_display"><i class="fas fa-lg fa-clipboard"></i></button>
+                <form action="/wallet" method="get">
+                    <input type="submit" class="bt2to1 button" value="戻る">
+                </form>
+            </div>
+    </div>
+    <script>
+        function copyToClipboard(){
+            var copyTarget = document.getElementById("gama_link");
+            copyTarget.select();
+            document.execCommand("Copy");
+        }
+    </script>
+    </body>
+
+</html>
