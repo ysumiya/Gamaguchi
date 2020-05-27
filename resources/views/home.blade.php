@@ -16,6 +16,8 @@
 
             <?php
             foreach ($datas as $data) {
+
+                echo '<form action="/wallet/'.$data["gama_id"].'" method="GET"> @csrf';
             
                 echo '<button class="gama_wrapper"><div class="gama">';
 
@@ -31,6 +33,8 @@
                 echo '</div><div class="gama_zandaka">¥'.$data["sum"].'</div>
 
                 </div></button>';
+
+                echo '</form>';
             
             }
             ?>

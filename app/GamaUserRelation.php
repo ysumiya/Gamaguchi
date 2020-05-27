@@ -22,4 +22,8 @@ class GamaUserRelation extends Model
     {
         return $this->belongsTo(Gama::class, 'gama_id');
     }
+
+    public function is_owner($gama_id, $user_id) {
+        
+    }
 }

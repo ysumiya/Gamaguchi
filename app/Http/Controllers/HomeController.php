@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\GamaUserRelation;
 use App\User;
 use App\Gama;
+use DB;
 // use App\Http\Controllers\GamaRelationController;
 
 class HomeController extends Controller
@@ -28,6 +29,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // DB::enableQueryLog();
         $user_id = Auth::id();
         $user = User::find($user_id);
         $kojin_sum = $user->sum;
@@ -35,12 +37,13 @@ class HomeController extends Controller
         $datas = array();
         foreach ($relations as $relation) {
             $gama = $relation->gama;
+            $gama_id = $gama->id;
             $gama_name = $gama->gama_name;
             $sum = $gama->sum;
             $owner_flag = $relation->owner_flag;
-            array_push($datas, array("gama_name"=>$gama_name, "owner_flag"=>$owner_flag, "sum"=>$sum));
+            array_push($datas, array("gama_id"=>$gama_id, "gama_name"=>$gama_name, "owner_flag"=>$owner_flag, "sum"=>$sum));
         }
-
+        // dd(DB::getQueryLog());
         return view('home', compact("datas", "kojin_sum"));
     }
 }
