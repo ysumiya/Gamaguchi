@@ -3,7 +3,9 @@ body{
     color:#333;
     font-size:14px;
 }
-
+form{
+    display:inline-block;
+}
 .title{
     font-size:24px;
     font-weight:bold;
@@ -27,6 +29,9 @@ body{
     font-size:16px; color:#777;
     box-sizing:border-box;
 }
+.button:hover{
+    background:#eee;
+}
 .bt2to1{
     display:inline-block;
     width:138px; margin:5px;
@@ -40,7 +45,11 @@ body{
     border:1px solid #00D03A;
     color:#fff;
 }
+.gama_color:hover{
+    background:#14ff56;
+    border:1px solid #14ff56;
 
+}
 .gamacap{
     fill:#fff;
     position:absolute; top:-30px;
@@ -75,6 +84,7 @@ body{
     padding:10px;
     box-sizing: border-box;
     text-align:center;
+    position: relative;
 }
 .gama_wrapper{
     border:none; background:transparent;
@@ -123,6 +133,36 @@ body{
 .no_display{
     border:none; margin:0; background: transparent;
 }
+form.backbutton{
+    position:absolute; top:20px; left:20px;
+}
+.backbutton button{
+    width:30px; height:30px;
+    color:#aaa;
+}
+button.minibuttton{
+    width:30px; height:30px;
+    
+    display: inline-block;
+}
+form.minibutton{
+    display: inline-block;
+    margin:0 5px;
+}
+.whitebt{
+    color:#fff;
+}
+hr{
+    width:calc(100% - 10px);
+    margin: 5px 5px 5.5px 5px;
+    border:solid 0.5px #ccc;
+}
+.smallerbutton{
+width:50px; height:25px;
+font-size:12px;
+margin:2.5px 0;
+}
+
 /** welcome,register,login **/
 .gama_back{
     background:#00D03A;
@@ -172,6 +212,21 @@ body{
 .line{
     background:#5ae628;
     border:1px solid #5ae628;
+    color:#fff;
+}
+.fb:hover{
+    background:rgb(99, 125, 180);
+    border:1px solid rgb(99, 125, 180);
+    color:#fff;
+}
+.google:hover{
+    background:#e77366;
+    border:1px solid #e77366;
+    color:#fff;
+}
+.line:hover{
+    background:#78f74a;
+    border:1px solid #78f74a;
     color:#fff;
 }
 
@@ -278,4 +333,88 @@ body{
 .gama.copygama{
     margin:20px auto 0 auto;
 }
+
+
+/** wallet **/
+.gama.onwallet{
+    margin:60px auto 20px auto;
+}
+.wallet_button{
+    position:absolute; bottom:10px; right:0;
+    height:30px; width:110px;
+    filter: drop-shadow(0 0 5px #333);
+}
+.wallet_member{
+    width:300px;
+    height:calc(100vh - 450px);
+    margin:0 auto;
+    overflow-y:scroll;
+    scrollbar-width: none;
+}
+.wallet_member::-webkit-scrollbar {
+    display:none;
+}
+
+.wallet_member .each{
+    width:300px; height:30px; 
+    margin:25px auto 10px auto;
+}
+.member_name{
+    width:200px; height:30px;
+    margin:0;
+    display: inline-block;
+    vertical-align: top;
+    padding:6px 0 0 10px;
+    box-sizing: border-box;
+    text-align:left;
+}
+.toggle{
+    display:inline-block;
+    width:50px; height:30px;
+    margin:0 10px 0 40px;
+}
+
+.toggle input{
+    display:none;
+}
+.toggle input.smallerbutton{
+    display:block;
+}
+
+.toggle label{
+    display:block;
+    height:25px;
+    width:50px;
+    background:#ccc;
+    border-radius:15px;
+	position:relative;
+	margin:2.5px 0;
+}
+.toggle label::before{
+    height:21px;
+    width:21px;
+    content:"";
+    display:block;
+    position:absolute;
+    left:2px; top:2px;
+    border-radius:50%;
+    background:#fff;
+    transition-duration:0.2s;
+}
+
+.toggle input:checked + label{
+    background-color:#00D03A;
+}
+.toggle input:checked + label::before{
+    background-color:#fff;
+	left:27px;
+}	
+
+.toggle label span{
+	display:none;
+}
+.wallet_controller{
+    position: absolute;bottom:20px; left:30px;
+    text-align: left;
+    width:300px; height:100px;
 }
