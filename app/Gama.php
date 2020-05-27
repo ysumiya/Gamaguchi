@@ -14,7 +14,7 @@ class Gama extends Model
 
     public function gamauserrelations()
     {
-        return $this->belongsToMany('App\GamaUserRelation');
+        return $this->hasMany('App\GamaUserRelation');
     }
 
     public function get_gama_by_gama_id($gama_id) {

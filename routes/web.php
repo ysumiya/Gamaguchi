@@ -37,3 +37,5 @@ Route::post('/gama', 'GamaController@insert');
 Route::get('/create_gama_complete',  function() {
     return view('create_gama_complete');
 });
+
+Route::get('/wallet/{id}', 'DetailController@index');
