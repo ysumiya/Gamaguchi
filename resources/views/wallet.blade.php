@@ -15,8 +15,8 @@
                         <path d="M216.51,68.84,184.22,36.56A25,25,0,0,0,140.15,13a25,25,0,0,0-44.08,23.6L63.79,68.84H15a15,15,0,0,0-15,15H70l36.67-36.67A25,25,0,0,0,140.15,37a25,25,0,0,0,33.47,10.13l36.67,36.67h70a15,15,0,0,0-15-15Z"/>
                     </svg>
                     <div class="gama_img"><img src={{ asset( "assets/img/wanima.jpg" )}}></div>
-                    <div class="gama_name">滋賀旅行共有財布<div id="owner_button"></div></div>
-                    <div class="gama_zandaka">¥35,640</div>
+                    <div class="gama_name">{{ $gama_name }}<div id="owner_button"></div></div>
+                    <div class="gama_zandaka">¥{{ $sum }}</div>
                     <div class="wallet_button">
                         <form action="  " method="  " class="minibutton">
                             @csrf
@@ -31,7 +31,49 @@
                         </form>
                     </div>
                 </div>
+
                 <div class="wallet_member">
+                    <div class="authed_member">
+                    <?php
+                        foreach ($member_datas as $data) {
+                            if (!$data["member_auth_flag"]){
+                                continue;
+                            }
+                            echo '<div class="each">
+                            <div class="member_name">'
+                                .$data["member_user_name"].   
+                            '</div><div class="toggle">';
+                            if ($data["member_owner_flag"]) {
+                                echo '<input type="checkbox" id="check" checked="checked">';
+                            }else {
+                                echo '<input type="checkbox" id="check">';
+                            }
+                            echo '
+                                <label for="check">
+                                </label>
+                            </div><hr>
+                        </div>';
+                        }
+                    ?>
+                    </div>
+
+                    <div class="no_authed_member">
+                    <?php
+                    foreach ($member_datas as $data) {
+                        if ($data["member_auth_flag"]){
+                            continue;
+                        }
+                        echo '<div class="member_name">'
+                        .$data["member_user_name"].  
+                        '</div><div class="toggle"><form action="  " method="  ">
+                            <input type="submit" class="button google smallerbutton" value="承認">
+                        </form></div><hr>';
+                    }
+                    ?>
+                    </div>
+                </div>
+
+                <!-- <div class="wallet_member">
                     <div class="each">
                         <div class="member_name">
                             ライフハック太郎    
@@ -66,7 +108,7 @@
                             <input type="submit" class="button google smallerbutton" value="承認">
                         </form></div><hr>
                     </div>
-                </div>
+                </div> -->
                 <div class="wallet_controller">
                     <form action="  " method="  " >
                         @csrf

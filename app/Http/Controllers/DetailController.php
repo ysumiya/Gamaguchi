@@ -22,7 +22,8 @@ class DetailController extends Controller
         $member_datas = array();
         foreach ($relations as $relation) {
             $user = $relation->user;
-            $user_name = $user->user_name;
+            $user_name = $user->name;
+            // var_dump($user_name);
             $auth_flag = $relation->auth_flag;
             $owner_flag = $relation->owner_flag;
             array_push($member_datas, array("member_user_name"=>$user_name, "member_auth_flag"=>$auth_flag, "member_owner_flag"=>$owner_flag));
