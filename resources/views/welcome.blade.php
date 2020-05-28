@@ -8,7 +8,7 @@
         </svg>
         <div class="welcome_gama">
             <div class="sub_title">みんなでつかえる、<br>おてがる財布。</div>
-            <img src={{ asset("assets/img/gama.png" )}}>　
+            <img src={{ asset("assets/img/gama_logo.png" )}}>　
         </div>
         <form action="/register" method="get"><input type="submit" class="gama_color button" value="メールアドレスで登録"></form>
         <form action="/login" method="get"><input type="submit" class="button" value="ログイン"></form>

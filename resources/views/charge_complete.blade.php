@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+    <?php
+    $gama_id = session("gama_id");
+    ?>
+
     <body class="gama_back">
         <div class="welcome_mainbox">
             <svg class="gamacap" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280.29 83.84">
@@ -9,8 +13,8 @@
             <div class="sub_title">入金完了！</div>
                 <div class="charge_complete">
                     <div class="sub_title">現在の残高</div>
-                    <div class="title new_zandaka">¥41,640</div>
-                    <form action="/wallet" method="get">
+                    <div class="title new_zandaka">¥{{ $gama_sum }}</div>
+                    <form action="/wallet/{{$gama_id}}" method="get">
                         @csrf
                         <input type="submit" class="button bt2to1 gama_color" value="戻る">
                     </form>

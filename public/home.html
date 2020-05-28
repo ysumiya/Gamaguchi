@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
-
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" type＝”text/css” href="assets/css/style.css">
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> 
@@ -14,11 +14,11 @@
     <body class="gama_back">
         <div class="mainbox">
             <div class="user_box">
-                <form action="/logout" method="POST">
-                    <button type="submit" class="no_display"><div class="icon home"><img src="assets/img/wanima.jpg"></div></button>
+                <form action="/menu" method="get">
+                    <button type="submit" class="no_display"><div class="icon home"><img src={{ asset("assets/img/wanima.jpg" ) }}></div></button>
                 </form>
-                <div class="zandaka"><span>¥5,000</span></div>
-            </div>
+                <div class="zandaka"><span>¥{{ $kojin_sum }}</span></div>
+            </div> 
             <div class="gama_list">
                 <button class="gama_wrapper"><div class="gama">        
                     <svg class="gamacap" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280.29 83.84">

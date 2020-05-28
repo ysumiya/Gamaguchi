@@ -12,6 +12,7 @@ class DetailController extends Controller
     //
     public function index(Request $request, $id){
         $user_id = Auth::id();
+        $gama_id = $id;
         $gama = Gama::find($id);
         $gama_name = $gama->gama_name;
         $sum = $gama->sum;
@@ -28,6 +29,6 @@ class DetailController extends Controller
             $owner_flag = $relation->owner_flag;
             array_push($member_datas, array("member_user_name"=>$user_name, "member_auth_flag"=>$auth_flag, "member_owner_flag"=>$owner_flag));
         }
-        return view("wallet", compact("gama_name", "sum", "is_owner", "member_datas"));
+        return view("wallet", compact("gama_name", "sum", "is_owner", "member_datas", "gama_id"));
     }
 }
