@@ -42,7 +42,8 @@ class HomeController extends Controller
             $sum = $gama->sum;
             $icon_path = $gama->icon_path;
             $owner_flag = $relation->owner_flag;
-            array_push($datas, array("gama_id"=>$gama_id, "gama_name"=>$gama_name, "owner_flag"=>$owner_flag, "sum"=>$sum, "icon_path"=>$icon_path));
+            $active_flag = $gama->active_flag;
+            array_push($datas, array("gama_id"=>$gama_id, "gama_name"=>$gama_name, "owner_flag"=>$owner_flag, "sum"=>$sum, "icon_path"=>$icon_path, "active_flag"=>$active_flag));
         }
         // dd(DB::getQueryLog());
         return view('home', compact("datas", "kojin_sum"));

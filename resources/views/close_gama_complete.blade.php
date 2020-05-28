@@ -8,7 +8,7 @@
             </svg>
             <div class="sub_title">Gamaを閉じる</div>
                 <div class="close_gama_complete">
-                    <div class="sub_title">Gamaを閉じました。<br><strong>¥11,880</strong>が返金されました。‬</div>
+                    <div class="sub_title">Gamaを閉じました。<br><strong>¥{{$return_amount}}</strong>が返金されました。‬</div>
                     <form action="/home" method="get">
                         @csrf
                         <input type="submit" class="button bt2to1 gama_color" value="ホームに戻る">

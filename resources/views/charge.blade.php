@@ -20,7 +20,7 @@
                 </div>
                 <input type="submit" class="gama_color bt2to1 button" value="入金"> 
             </form>
-            <form action="/wallet" method="get">
+            <form action="/wallet/{{ session('gama_id') }}" method="get">
                 @csrf
                 <input type="submit" class="button bt2to1" value="キャンセル">
             </form>

@@ -12,7 +12,7 @@
                 <div class="gama_pay_QR">
                     <img src={{ asset( "assets/img/QR.png" ) }}>
                 </div>
-                <form action="/wallet" method="get">
+                <form action='/wallet/{{session("gama_id")}}' method="get">
                 @csrf
                     <input type="submit" class="bt2to1 button" value="戻る">
                 </form>

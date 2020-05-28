@@ -8,19 +8,20 @@
             </svg>
             <div class="sub_title">Gamaを閉じる</div>
                 <div class="close_gama">
-                    <div>現在の残高：¥35,640</div>
-                    <div class="title">返金額：¥11,880‬</div>
+                    <div>現在の残高：¥{{$sum}}</div>
+                    <div class="title">返金額：¥{{$return_amount}}‬</div>
                     <div class="attention">
                         <div class="sub_title">注意！</div>
-                        ・端数はオーナーに返金されます<br>
+                        ・端数は返金されません<br>
                         ・一度Gamaを閉じると戻せません
                     </div>
-                    <form action="/wallet" method="get">
+                    <form action="/wallet/{{session('gama_id')}}" method="get">
                         @csrf
                         <input type="submit" class="button bt2to1" value="戻る">
-                    </form><form action="/gama" method="delete">
+                    </form><form action="/close" method="post">
                         @csrf
                         <input type="submit" class="button bt2to1 google" value="Gamaを閉じる">
+                        <!-- <input type="hidden" name="_method" value="DELETE"> -->
                     </form>
                 </div>
             </div>

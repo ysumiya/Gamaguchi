@@ -76,10 +76,12 @@ class GamaController extends Controller
         // $realtion = GamaUserRelation::create(['user_id'=>$user_id, 'gama_id'=>$new_gama_id, 'auth_flag'=>1, 'owner_flag'=>1]);
             
             
-        $enc = Crypt::encrypt($new_gama_id."/".$user_id/*."date"*/);//new_gamna_idは↑のファンクションの範囲だけでしか使えないんだよなぁ
-        $url = "/join?code=".$enc;
+        $enc = Crypt::encrypt($new_gama_id."-".$user_id/*."date"*/);//new_gamna_idは↑のファンクションの範囲だけでしか使えないんだよなぁ
+        // dd($enc);
+        $url = "http://118.27.3.158/join?code=".$enc;
+        // dd($url);
 
-        return view('create_gama_complete', $url);
+        return view('create_gama_complete', compact("url"));
         
     }
 

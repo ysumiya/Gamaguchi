@@ -27,7 +27,7 @@ class DetailController extends Controller
             // var_dump($user_name);
             $auth_flag = $relation->auth_flag;
             $owner_flag = $relation->owner_flag;
-            array_push($member_datas, array("member_user_name"=>$user_name, "member_auth_flag"=>$auth_flag, "member_owner_flag"=>$owner_flag));
+            array_push($member_datas, array("member_user_id"=>$user->id, "member_user_name"=>$user_name, "member_auth_flag"=>$auth_flag, "member_owner_flag"=>$owner_flag));
         }
         return view("wallet", compact("gama_name", "sum", "is_owner", "member_datas", "gama_id"));
     }

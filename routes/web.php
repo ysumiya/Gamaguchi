@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('/menu', 'MenuController@show_menu_page');
+
 Route::get('/login', function () {
     return view('login');
 });
@@ -33,10 +35,15 @@ Route::get('/gama_create',  function() {
     });
 
 Route::post('/gama', 'GamaController@insert');
+// Route::delete('/gama', 'CloseController@close');
 
 Route::get('/create_gama_complete/{id}', 'GamaController@create_url');//遷移先変更、ID追加
 
-Route::get('/join', 'JoinController@join');
+Route::get('/join', 'JoinController@show_join_page');
+
+Route::post('/join', 'JoinController@join');
+
+Route::post('/join/auth', 'JoinController@auth');
 
 Route::delete('/gama', 'GamaController@delete');
 
@@ -47,3 +54,13 @@ Route::get('/charge', 'ChargeController@index');
 
 // Route::post('/charge/{id}', 'ChargeController@insert');
 Route::post('/charge', 'ChargeController@insert');
+
+Route::get('/payment', function() {
+    return view("payment_gama");
+});
+
+// Route::post('/payment', 'PaymentController@payment');
+
+Route::get('/close', 'CloseController@show_close_page');
+
+Route::post('/close', 'CloseController@close');
