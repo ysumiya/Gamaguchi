@@ -34,8 +34,8 @@ Route::get('/gama_create',  function() {
 
 Route::post('/gama', 'GamaController@insert');
 
-Route::get('/create_gama_complete',  function() {
-    return view('create_gama_complete');
-});
+Route::get('/create_gama_complete/{id}', 'GamaController@create_url');//遷移先変更、ID追加
 
 Route::get('/wallet/{id}', 'DetailController@index');
+
+Route::get('/join', 'JoinController@join');

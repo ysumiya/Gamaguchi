@@ -15,7 +15,8 @@
                     <div class="gama_img"><img src="assets/img/wanima.jpg"></div>
                 </div>
                 <div class="form_template copygama">共有リンク
-                    <input id="gama_link" type="text" value="https://www.gmo.jp/" readonly>
+                    <!-- <input id="gama_link" type="text" value="https://www.gmo.jp/" readonly> -->
+                    <input id="gama_link" type="text" value="{{ $url }}" readonly>
                 </div><button onclick="copyToClipboard()" class="copybutton no_display"><i class="fas fa-lg fa-clipboard"></i></button>
                 <form action="/home" method="get">
                     <input type="submit" class="gama_color bt2to1 button" value="完了">
