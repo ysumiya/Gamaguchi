@@ -33,7 +33,7 @@
                 </div>
             <input type="submit" class="gama_color bt2to1 button" name="create_gama" value="作成"> 
         </form>
-        <form action="/gama" method="delete">
+        <form action="/home" method="get">
         @csrf
             <input type="submit" class="button bt2to1" name="cancel" value="キャンセル">
         </form>
