@@ -34,6 +34,8 @@ Route::get('/gama_create',  function() {
 
 Route::post('/gama', 'GamaController@insert');
 
+Route::delete('/gama', 'GamaController@delete');
+
 Route::get('/create_gama_complete',  function() {
     return view('create_gama_complete');
 });
