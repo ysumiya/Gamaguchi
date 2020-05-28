@@ -37,6 +37,6 @@ class ChargeController extends Controller
         $user->sum = $new_user_sum;
         $user->save();
 
-        return view("charge_complete");
+        return view("charge_complete", ["gama_sum"=>$new_gama_sum]);
     }
 }

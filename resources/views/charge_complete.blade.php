@@ -13,7 +13,7 @@
             <div class="sub_title">入金完了！</div>
                 <div class="charge_complete">
                     <div class="sub_title">現在の残高</div>
-                    <div class="title new_zandaka">¥41,640</div>
+                    <div class="title new_zandaka">¥{{ $gama_sum }}</div>
                     <form action="/wallet/{{$gama_id}}" method="get">
                         @csrf
                         <input type="submit" class="button bt2to1 gama_color" value="戻る">

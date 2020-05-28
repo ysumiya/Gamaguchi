@@ -26,7 +26,8 @@
                 </svg>';       
 
                 // echo'<div class="gama_img"><img src='.{{ asset( "assets/img/wanima.jpg" ) }}.'></div>
-                echo'<div class="gama_img"><img src='.{{ asset( $data["icon_path"] ) }}.'></div>
+                // echo'<div class="gama_img"><img src='.asset( $data["icon_path"] ).'></div>
+                echo'<div class="gama_img"><img src='.asset( "assets/img/gama_back.png" ).'></div>
 
                 <div class="gama_name">'.$data["gama_name"];
                 if($data["owner_flag"] == 1){
