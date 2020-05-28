@@ -34,15 +34,12 @@ Route::get('/gama_create',  function() {
 
 Route::post('/gama', 'GamaController@insert');
 
+Route::get('/create_gama_complete/{id}', 'GamaController@create_url');//遷移先変更、ID追加
+
+Route::get('/join', 'JoinController@join');
+
 Route::delete('/gama', 'GamaController@delete');
 
-Route::get('/create_gama_complete',  function() {
-    return view('create_gama_complete');
-});
-
-// Route::middleware(['auth:api'])->group(function () {
-//     Route::get('/wallet/{id}', 'DetailController@index');
-// });
 Route::get('/wallet/{id}', 'DetailController@index');
 
 // Route::get('/charge/{id}', 'ChargeController@index');
