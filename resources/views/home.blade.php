@@ -4,7 +4,7 @@
 <body class="gama_back">
         <div class="mainbox">
             <div class="user_box">
-                <form action="/logout" method="POST">
+                <form action="/menu" method="POST">
                     @csrf
                     <button type="submit" class="no_display"><div class="icon home"><img src={{ asset("assets/img/wanima.jpg" ) }}></div></button>
                 </form>
@@ -16,6 +16,9 @@
 
             <?php
             foreach ($datas as $data) {
+                if (!$data["active_flag"]){
+                    continue;
+                }
 
                 echo '<form action="/wallet/'.$data["gama_id"].'" method="GET">';
             

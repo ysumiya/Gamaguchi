@@ -1,4 +1,4 @@
-extends('layouts.app')
+@extends('layouts.app')
 
 @section('content')
     <body class="gama_back">
@@ -14,11 +14,11 @@ extends('layouts.app')
                             </svg>
                             <div class="gama_img"><img src="assets/img/wanima.jpg"></div>
                         </div>
-                        <div class="join_text">ライフハック太郎さんから<br><strong>「滋賀旅行共有財布」</strong>に<br>招待されています。</div>
+                        <div class="join_text">{{ $user_name }}さんから<br><strong>「{{ $gama_name }}」</strong>に<br>招待されています。</div>
                         <form action="/home" method="get">
                             @csrf
                             <input type="submit" class="button bt2to1" value="参加しない">
-                        </form><form action="  " method="  ">
+                        </form><form action="/join" method="post">
                             @csrf
                             <input type="submit" class="button bt2to1 gama_color" value="参加する">
                         </form>
