@@ -31,11 +31,11 @@ class ChargeController extends Controller
         $gama->sum = $new_gama_sum;
         $gama->save();
 
-        $user = User::find($user_id);
-        $current_user_sum = $user->sum;
-        $new_user_sum = $current_user_sum - $amount;
-        $user->sum = $new_user_sum;
-        $user->save();
+        // $user = User::find($user_id);
+        // $current_user_sum = $user->sum;
+        // $new_user_sum = $current_user_sum - $amount;
+        // $user->sum = $new_user_sum;
+        // $user->save();
 
         return view("charge_complete", ["gama_sum"=>$new_gama_sum]);
     }
