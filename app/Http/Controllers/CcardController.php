@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Ccard;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class CcardController extends Controller
 {
@@ -24,7 +25,8 @@ class CcardController extends Controller
             return redirect('home');
         } catch (\Illuminate\Database\QueryException $exception) {
             $errorInfo = $exception->errorInfo;
-            return view('card_register', $data);
+	   \Log::critical($errorInfo); 
+           return view('card_register', $data);
         }
         
     }

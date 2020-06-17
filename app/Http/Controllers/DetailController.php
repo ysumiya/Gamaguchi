@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Gama;
 use App\GamaUserRelation;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class DetailController extends Controller
 {
@@ -29,6 +30,7 @@ class DetailController extends Controller
             $owner_flag = $relation->owner_flag;
             array_push($member_datas, array("member_user_id"=>$user->id, "member_user_name"=>$user_name, "member_auth_flag"=>$auth_flag, "member_owner_flag"=>$owner_flag));
         }
+	#\Log::critical('critical');
         return view("wallet", compact("gama_name", "sum", "is_owner", "member_datas", "gama_id"));
     }
 }

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Gama;
 use App\GamaUserRelation;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 use Crypt;//追加
@@ -35,8 +36,7 @@ class GamaController extends Controller
         // $data = gama_name
         $gama_name = $data->input('gama_name');
         $user_id = Auth::id();
-        // dd($data->all());
-        $gama = Gama::create(['gama_name'=>$gama_name]);
+        
         try{
             
             $gama = Gama::create(['gama_name'=>$gama_name]);
@@ -48,6 +48,7 @@ class GamaController extends Controller
   
         } catch (\Illuminate\Database\QueryException $exception) {
             $errorInfo = $exception->errorInfo;
+	    \Log::critical($errorInfo);
             return view('create_gama', $data);
         }
     }
