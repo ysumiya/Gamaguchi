@@ -36,7 +36,7 @@ class GamaController extends Controller
         // $data = gama_name
         $gama_name = $data->input('gama_name');
         $user_id = Auth::id();
-        
+
         try{
             
             $gama = Gama::create(['gama_name'=>$gama_name]);
