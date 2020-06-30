@@ -34,7 +34,7 @@ class GamaController extends Controller
     protected function insert(Request $data)
     {
         // $data = gama_name
-        $gama_name = $data->input('gama_name');
+        $gama_name = e($data->input('gama_name'));
         $user_id = Auth::id();
 
         try{

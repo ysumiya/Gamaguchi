@@ -21,7 +21,7 @@ class ChargeController extends Controller
         $gama_id = session("gama_id");
         $gama_name = session("gama_name");
         $user_id = Auth::id();
-        $amount = $request["charge_amount"];
+        $amount = e($request["charge_amount"]);
         $gama_log = GamaLog::create(["gama_id"=>$gama_id, "user_id"=>$user_id, "amount"=>$amount, "inc_dec_flag"=>1, "source"=>"入金"]);
         $personal_log = PersonalLog::create(["user_id"=>$user_id, "amount"=>-$amount, "inc_dec_flag"=>0, "source"=>"チャージ"]);
 
